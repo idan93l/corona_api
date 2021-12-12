@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #112035;
+  color: #f1faee;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.leftContainer {
+  width: 30%;
+  height: 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 5%;
+}
+
+.countryCorona {
+  height: 72%;
+  width: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+  background-color: #20395c;
+}
+
+.fetchedInfo {
+  width: 10%;
+  height: 20%;
+}
+
+.continentContainer, .countryContainer {
+  height: 6vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #20395c;
+  border-radius: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 4%;
+}
+
+.rightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.chart {
+  height: 75vh;
+  width: 70vw;
+}
+
+button, select {
+  color: #f1faee;
+  background: #457b9d;
+  border-radius: 5px;
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  padding: 0.3rem;
+}
+
+.getContinentInfo, .getCountryInfo {
+  color: #f1faee;
+  background: #e63946;
+  font-family: 'Roboto Slab', serif;
+}
