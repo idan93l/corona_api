@@ -83,10 +83,10 @@ const getContinent = async () => {
       continentArray.push(tempObj);
       addLabels(myChart, name.common);
     }
+    console.log(data);
   } catch (err) {
     console.log(err);
   }
-  // console.log(continentArray);
 };
 
 const getCoronaInfo = async (text) => {
@@ -117,8 +117,6 @@ const getCountryCoronaInfo = async () => {
     newDeaths.innerHTML = data.data.today.deaths;
     totalRecovered.innerHTML = data.data.latest_data.recovered
     inCritical.innerHTML = data.data.latest_data.critical
-    console.log(data.data);
-    // injectHtml(data);
   } catch (err) {
     console.log(err);
   }
@@ -126,17 +124,11 @@ const getCountryCoronaInfo = async () => {
 
 function removeLabels(chart) {
   chart.data.labels = [];
-  // chart.data.datasets.forEach((dataset) => {
-  //   dataset.data = [];
-  // });
   chart.update();
 }
 
 function addLabels(chart, label) {
   chart.data.labels.push(label);
-  // chart.data.datasets.forEach((dataset) => {
-  //   dataset.data.push(data);
-  // });
   chart.update();
 }
 
@@ -169,11 +161,7 @@ function buttonPushed(button) {
 
 selectContinent.addEventListener("click", getContinent);
 
-// getContinentInfo.addEventListener("click", getContinent);
-
 selectCountry.addEventListener("click", getCountryCoronaInfo);
-
-// getCountryInfo.addEventListener("click", getCountryCoronaInfo);
 
 confirmed.addEventListener("click", () => {
   const text = confirmed.classList.value;
