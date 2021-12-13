@@ -61,7 +61,7 @@ body {
   flex-direction: row;
   background-color: #20395c;
   border-radius: 10px;
-  padding: 0 1% 0 1%;
+  /* padding: 0 1% 0 1%; */
 }
 
 .rightContainer {
