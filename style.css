@@ -41,6 +41,7 @@ body {
   flex-direction: column;
   border-radius: 10px;
   background-color: #20395c;
+  margin-bottom: 1.5%;
 }
 
 .fetchedInfo {
@@ -75,7 +76,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 27%;
+  width: 32%;
   margin-bottom: 1%;
 }
 
@@ -96,7 +97,7 @@ button, select {
 }
 
 select {
-  width: 60%;
+  width: 66%;
   text-align: center;
 }
 
