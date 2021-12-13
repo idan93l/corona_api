@@ -1,25 +1,18 @@
 const selectContinent = document.querySelector(".continent");
-const getContinentInfo = document.querySelector(".getContinentInfo");
-const getCountryInfo = document.querySelector(".getCountryInfo");
 const selectCountry = document.querySelector(".countries");
 const buttons = document.querySelector("buttons");
 const confirmed = document.querySelector(".confirmed");
 const deaths = document.querySelector(".deaths");
 const recovered = document.querySelector(".recovered");
 const critical = document.querySelector(".critical");
-const fetchedInfo = document.querySelector("fetchedInfo");
-const colors = ["orange", "yellow", "green", "red", "blue", "pink", "purple"];
-const totalCases = document.querySelector("totalCases");
-const newCases = document.querySelector("newCases");
-const totalDeaths = document.querySelector("totalDeaths");
-const newDeaths = document.querySelector("newDeaths");
-const totalRecovered = document.querySelector("totalRecovered");
-const inCritical = document.querySelector("inCritical");
+const fetchedInfo = document.querySelector(".fetchedInfo");
+const totalCases = document.querySelector(".totalCases");
+const newCases = document.querySelector(".newCases");
+const totalDeaths = document.querySelector(".totalDeaths");
+const newDeaths = document.querySelector(".newDeaths");
+const totalRecovered = document.querySelector(".totalRecovered");
+const inCritical = document.querySelector(".inCritical");
 
-
-
-
-inCritical
 let continentArray;
 
 const ctx = document.getElementById("myChart").getContext("2d");
@@ -113,13 +106,17 @@ const getCoronaInfo = async (text) => {
 };
 
 const getCountryCoronaInfo = async () => {
-  let countryCode = getCountryCode();
+  let countryCode = await getCountryCode();
   try {
-    totalCases.innerHTML = "";
     const data = await (
       await fetch(`https://corona-api.com/countries/${countryCode}`)
     ).json();
-    totalCases.textContent = data.data.latest_data.confirmed;
+    totalCases.innerHTML = data.data.latest_data.confirmed;
+    newCases.innerHTML = data.data.today.confirmed;
+    totalDeaths.innerHTML = data.data.latest_data.deaths;
+    newDeaths.innerHTML = data.data.today.deaths;
+    totalRecovered.innerHTML = data.data.latest_data.recovered
+    inCritical.innerHTML = data.data.latest_data.critical
     console.log(data.data);
     // injectHtml(data);
   } catch (err) {
@@ -170,9 +167,13 @@ function buttonPushed(button) {
   }
 }
 
-getContinentInfo.addEventListener("click", getContinent);
+selectContinent.addEventListener("click", getContinent);
 
-getCountryInfo.addEventListener("click", getCountryCoronaInfo);
+// getContinentInfo.addEventListener("click", getContinent);
+
+selectCountry.addEventListener("click", getCountryCoronaInfo);
+
+// getCountryInfo.addEventListener("click", getCountryCoronaInfo);
 
 confirmed.addEventListener("click", () => {
   const text = confirmed.classList.value;

@@ -7,7 +7,7 @@ body {
   background-color: #112035;
   color: #f1faee;
   font-family: 'Roboto Slab', serif;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,74 +20,89 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .leftContainer {
-  width: 30%;
-  height: 75%;
+  width: 60%;
+  height: 10%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  align-self: flex-start;
-  margin-top: 5%;
+  flex-direction: row;
 }
 
 .countryCorona {
-  height: 72%;
-  width: 91%;
+  height: 7%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  border-radius: 50px;
+  flex-direction: column;
+  border-radius: 10px;
   background-color: #20395c;
 }
 
 .fetchedInfo {
-  width: 10%;
-  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 48%;
 }
 
 .continentContainer, .countryContainer {
-  height: 6vh;
-  width: 90%;
+  height: 60%;
+  width: 46%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background-color: #20395c;
   border-radius: 10px;
-  padding-left: 1%;
-  padding-right: 1%;
-  margin-bottom: 4%;
+  padding: 0 1% 0 1%;
 }
 
 .rightContainer {
+  height: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 27%;
+  margin-bottom: 1%;
+}
 
 .chart {
   height: 75vh;
   width: 70vw;
+  margin-bottom: 2%;
 }
 
 button, select {
   color: #f1faee;
   background: #457b9d;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 17px;
   font-family: 'Roboto Slab', serif;
   padding: 0.3rem;
+  cursor: pointer;
 }
 
-.getContinentInfo, .getCountryInfo {
-  color: #f1faee;
-  background: #e63946;
-  font-family: 'Roboto Slab', serif;
+select {
+  width: 60%;
+  text-align: center;
+}
+
+.fetchedContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }

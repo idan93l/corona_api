@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="icon" type="image/x-icon" href="./coronavirus.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
@@ -26,42 +28,50 @@
             <option value="americas">Americas</option>
             <option value="oceania">Oceania</option>
         </select>
-        <button class="getContinentInfo">Get Info</button>
       </div>
       <div class="countryContainer">
         <label for="countries">Choose a country:</label>
         <select class="countries">
         </select>
-        <button class="getCountryInfo">Get Info</button>
-      </div>
-      <div class="countryCorona">
-        <div class="countryCoronaHeaders">
-          <div>Total cases:</div>
-          <div>New cases:</div>
-          <div>Total deaths:</div>
-          <div>new deaths:</div>
-          <div>Total Recovered:</div>
-          <div>In critical condition:</div>
-        </div>
-        <div class="fetchedInfo">
-          <div class="totalCases"></div>
-          <div class="newCases"></div>
-          <div class="totalDeaths"></div>
-          <div class="newDeaths"></div>
-          <div class="totalRecovered"></div>
-          <div class="inCritical"></div>
-        </div>
       </div>
     </div>
     <div class="rightContainer">
-      <div class="chart">
-        <canvas id="myChart"></canvas>
-      </div>
       <div class="buttons">
         <button class="confirmed">Confirmed</button>
         <button class="deaths">Deaths</button>
         <button class="recovered">Recovered</button>
         <button class="critical">Critical</button>
+      </div>
+      <div class="chart">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="countryCorona">
+        <div class="fetchedInfo">
+          <div class="fetchedContainer">
+            <div>Total cases:&nbsp;&nbsp;</div>
+            <div class="totalCases"></div>
+          </div>
+          <div class="fetchedContainer">
+            <div>New cases:&nbsp;&nbsp;</div>
+            <div class="newCases"></div>
+          </div>
+          <div class="fetchedContainer">
+            <div>Total deaths:&nbsp;&nbsp;</div>
+            <div class="totalDeaths"></div>
+          </div>
+          <div class="fetchedContainer">
+            <div>new deaths:&nbsp;&nbsp;</div>
+            <div class="newDeaths"></div>
+          </div>
+          <div class="fetchedContainer">
+            <div>Total Recovered:&nbsp;&nbsp;</div>
+            <div class="totalRecovered"></div>
+          </div>
+          <div class="fetchedContainer">
+            <div>In critical condition:&nbsp;&nbsp;</div>
+            <div class="inCritical"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
