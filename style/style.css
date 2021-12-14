@@ -77,13 +77,11 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 32%;
-  margin-bottom: 1%;
 }
 
 .chart {
   height: 75vh;
   width: 70vw;
-  margin-bottom: 2%;
 }
 
 button, select {

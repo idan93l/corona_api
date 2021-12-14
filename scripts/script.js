@@ -44,13 +44,12 @@ const config = {
   options: {
     radius: 5,
     hitRadius: 30,
-    hoverRadius: 12,
+    hoverRadius: 13,
     responsive: true,
   },
 };
 
 const myChart = new Chart(ctx, config);
-// };
 
 const getCountryCode = () => {
   for (let i = 0; i < continentArray.length; i++) {
@@ -116,7 +115,7 @@ const getCountryCoronaInfo = async () => {
     totalDeaths.innerHTML = data.data.latest_data.deaths;
     newDeaths.innerHTML = data.data.today.deaths;
     totalRecovered.innerHTML = data.data.latest_data.recovered
-    inCritical.innerHTML = data.data.latest_data.critical
+    inCritical.innerHTML = data.data.latest_data.critical;
   } catch (err) {
     console.log(err);
   }
