@@ -105,7 +105,7 @@ const getCoronaInfo = async (text) => {
 };
 
 const getCountryCoronaInfo = async () => {
-  let countryCode = await getCountryCode();
+  let countryCode = getCountryCode();
   try {
     const data = await (
       await fetch(`https://corona-api.com/countries/${countryCode}`)
